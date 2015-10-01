@@ -6,3 +6,11 @@ if __name__ == '__main__':　について
 つまり__name__を参照することで直接実行されたファイルなのか、importされたファイルなのかを識別する事ができる。
 
 参考 http://azuuun-memorandum.hatenablog.com/entry/2015/05/09/002549
+
+
+range()などの戻り値　について
+
+Python3系ではrange()やdict.items()の戻り値はlist型ではなくiteratorを返すようになっている。
+よってリストを得たい場合には変換が必要。
+
+
