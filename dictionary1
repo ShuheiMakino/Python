@@ -1,0 +1,36 @@
+'''
+Created on 2015/10/02
+
+@author: ms
+'''
+
+if __name__ == '__main__':
+    #辞書テスト
+    a = {1: "one", 2: "two", "three": 3, 4: "四"}
+    print(a[1])
+    print(a[2])
+    print(a["three"])
+    print(a[4])
+    
+    #辞書テスト(関数を扱う)
+    def hello():
+        print("hello")
+    
+    b = {hello: "this is a function"}
+    print(b[hello])
+    
+    #dict関数
+    colorDict = dict({"red": "赤",  "blue": "青",  "green": "緑"})
+    print(colorDict["red"])
+    print(colorDict["blue"])
+    print(colorDict["green"])
+    
+    #copy関数
+    colorDict2 = colorDict.copy()
+    print(colorDict2)
+    
+    #fromkeysメソッド
+    countryDict = dict.fromkeys(["Japan", "USA", "China"], "country")
+    print(countryDict["Japan"])
+    print(countryDict["USA"])
+    
