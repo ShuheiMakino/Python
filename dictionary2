@@ -1,0 +1,44 @@
+'''
+Created on 2015/10/03
+
+@author: ms
+'''
+
+if __name__ == '__main__':
+    #keys() , values() , items()メソッド
+    ageDict = {"Ken": 10, "John": 20, "Ryu": 30, "Bob": 45}
+    print(ageDict.keys())
+    print(ageDict.values())
+    print(ageDict.items())
+    
+    #in演算子でキーの確認
+    print("Ken" in ageDict)
+    print(10 in ageDict)    #値は確認できない
+    print("Joe" in ageDict)
+    
+    #構成要素数の取得 len
+    print(len(ageDict))
+    
+    #辞書の更新
+    #キーに対応した値の更新
+    ageDict["Ken"] = 99
+    print(ageDict["Ken"])
+    #新たな要素の追加
+    ageDict["Wales"] = 1
+    print(ageDict)
+    #setdefaultメソッド    .setdefault(key, default)
+    #キーが存在すれば値を返し、存在しなければデフォルト値で辞書に追加
+    print(ageDict.setdefault("Ken"))
+    ageDict.setdefault("Pon", 66)
+    print(ageDict)
+    
+    #辞書の結合 update
+    sexDict = {"Ken": "male", "Yu": "female", "John": "male"}
+    ageDict.update(sexDict)     #2つの辞書の結合
+    print(ageDict)
+    ageDict.update({"Yu": 17})      #指定して更新
+    print(ageDict)
+    
+    #要素の削除 del
+    del ageDict["Ken"]
+    print(ageDict)
